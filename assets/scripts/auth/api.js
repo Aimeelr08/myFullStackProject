@@ -39,8 +39,21 @@ const changePassword = function (data) {
     data: data,
   });
 };
+const ajaxDefaults = {
+  url: 'https://aimeelr08.github.io/myFullStackProject/',
+};
+
+const myRequest = (data, success, fail) => {
+  $.ajax(Object.assign({ method: 'POST', data }, ajaxDefaults))
+  .done(success)
+  .fail(fail);
+};
+
+
+
 
 module.exports = {
+    myRequest,
   signUp,
   signIn,
   signOut,
