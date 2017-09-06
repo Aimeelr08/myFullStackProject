@@ -1,7 +1,7 @@
 'use strict';
 
 const app = {
-  host: 'https://mybackfullstackproject.herokuapp.com',
+  host: 'http://mybackfullstackproject.herokuapp.com',
 };
 
 module.exports = app;
