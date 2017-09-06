@@ -1,7 +1,7 @@
 'use strict';
 
 const app = {
-  host: 'https://wdi-my-library.herokuapp.com',
+  host: 'https://mybackfullstackproject.herokuapp.com',
 };
 
 module.exports = app;

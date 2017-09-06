@@ -10,12 +10,21 @@
       <!-- Do not add `script` tags unless you know what you are doing -->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
   </head>
   <body class="container-fluid">
-    <button id="getBooksButton" class="btn btn-default">Get Books!</button>
-    <button id="clearBooksButton" class="btn btn-default">Clear Books!</button>
+    <!-- <div class="block"style= "display:none">
+    <button id="getBooksButton" class="btn-large btn-floating">Get</button>
+    <button id="clearBooksButton" class="btn-large btn-floating">Clear</button>
+    <button id="updateBookButton" class="btn-large btn-floating">New</button>
+    <button id="deleteBookButton" class="btn-large btn-floating">Delete </button>
     <div id="content" class="content">
-    </div>
+    </div> </div> -->
     <article>
       <form id="sign-up">
         <fieldset>
@@ -23,7 +32,7 @@
           <input type="text" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input type="submit" name="submit" value="Sign up!">
+          <input type="submit" name="submit" value="Sign up!" class="btn">
         </fieldset>
       </form>
 
@@ -32,26 +41,28 @@
           <legend>Sign In!</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" name="submit" value="Sign In">
+          <input type="submit" name="submit" value="Sign In" class="btn">
         </fieldset>
       </form>
 
-      <form id="sign-out">
-        <fieldset>
-          <legend>Sign Out!</legend>
-          <input class="sign-out" type="submit" value="Sign Out">
-        </fieldset>
-      </form>
 
       <form id="change-password">
         <fieldset>
           <legend>Change Password!</legend>
           <input type="password" name="passwords[old]" placeholder="Current Password">
           <input type="password" name="passwords[new]" placeholder="New Password">
-          <input type="submit" name="submit" value="Change Password">
+          <input type="submit" name="submit" value="Change Password" class="btn" >
         </fieldset>
       </form>
     </article>
+
+
+    <form id="sign-out">
+      <fieldset>
+        <legend>Sign Out!</legend>
+        <input class="sign-out btn" type="submit" value="Sign Out">
+      </fieldset>
+    </form>
 
   </body>
 </html>
