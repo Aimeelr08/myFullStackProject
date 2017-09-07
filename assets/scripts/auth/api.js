@@ -1,7 +1,6 @@
 'use strict';
 
-const app = require('../app.js');
-
+const app = require('../app.js')
 const signUp = function (data) {
   return $.ajax({
     url: app.host + '/sign-up',
@@ -41,6 +40,7 @@ const changePassword = function (data) {
 };
 const ajaxDefaults = {
   url: 'https://aimeelr08.github.io/myFullStackProject/',
+
 };
 
 const myRequest = (data, success, fail) => {
@@ -49,11 +49,23 @@ const myRequest = (data, success, fail) => {
   .fail(fail);
 };
 
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "https://mybackfullstackproject.herokuapp.com/", true);
 
+// xhr.onreadystatechange = function() {
+//   if (xhr.readyState == 4) {
+//     // WARNING! Might be evaluating an evil script!
+//     var resp = eval("(" + xhr.responseText + ")");
+//
+//   }
+// }
+xhr.send();
 
 
 module.exports = {
-    myRequest,
+  xhr,
+  ajaxDefaults,
+  myRequest,
   signUp,
   signIn,
   signOut,
