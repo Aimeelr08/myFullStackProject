@@ -4,6 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields');
 
 const api = require('./api');
 const ui = require('./ui');
+
 const onSignUp = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -46,4 +47,8 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
+  onSignUp,
+  onSignIn,
+  onSignOut,
+  onChangePassword
 };

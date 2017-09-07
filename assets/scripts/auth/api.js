@@ -50,7 +50,7 @@ const myRequest = (data, success, fail) => {
 };
 
 let xhr = new XMLHttpRequest();
-xhr.open("POST", "https://mybackfullstackproject.herokuapp.com/", true);
+xhr.open("POST", "https://aimeelr08.github.io/myFullStackProject/", true);
 
 // xhr.onreadystatechange = function() {
 //   if (xhr.readyState == 4) {
@@ -63,6 +63,7 @@ xhr.send();
 
 
 module.exports = {
+  app,
   xhr,
   ajaxDefaults,
   myRequest,
