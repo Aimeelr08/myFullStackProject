@@ -1,10 +1,17 @@
-{{#each books as |book|}}
 
-  <!-- {{> partial}}
-  Don't uncomment yet -->
 
  <!-- Developers, why are we using data-id and not just id? -->
+ <!DOCTYPE html>
+ <html>
 
+   <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <style>
+     </style>
+   </head>
+
+
+   <body>
 
 <div>{{#> scripts-block}}
 {{!-- Let's add a second stylesheet for this layout. --}}
@@ -13,7 +20,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
   {{/inline}}
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tags :defaults %>
 
+  <% 1000.times do |n| %>
+  user_<%= n %>:
+    username: <%= "user#{n}" %>
+    email: <%= "user#{n}@example.com" %>
+  <% end %>
 {{/scripts-block}}
 <h2>Hello World</h2>
 <p>

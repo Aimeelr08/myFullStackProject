@@ -38,6 +38,17 @@ const onChangePassword = (event) => {
 };
 
 
+
+$(() => {
+
+  $('#form').on('submit', function (e) {
+    let data = getFormFields(this);
+    e.preventDefault();
+    api.myRequest(data, ui.success, ui.failure);
+  });
+});
+
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
@@ -46,6 +57,7 @@ const addHandlers = () => {
 };
 
 module.exports = {
+  request,
   addHandlers,
   onSignUp,
   onSignIn,

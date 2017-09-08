@@ -21,7 +21,23 @@
     <button id="updateBookButton" >New</button>
     <button id="deleteBookButton" >Delete </button>
     <div id="content" class="content"> -->
-    <!-- </div> </div> -->
+    <!-- </div> //look for the php/to any file to  require to index html
+INVOKE THE FUNCTION CALL IN THE SCRIPTT!
+//all methods
+//wires all out endpoints/routes
+module.exports = controller({
+  index,
+  show,
+  create,
+  update,
+  destroy
+}, { before: [
+  { method: setUser, only: ['index', 'show'] },
+  { method: authenticate, except: ['index', 'show'] },
+  { method: setModel(Example), only: ['show'] },
+  { method: setModel(Example, { forUser: true }), only: ['update', 'destroy'] }
+] })
+</div> -->
 
     <article>
       <form id="sign-up">

@@ -16,7 +16,8 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  console.log(app.user);
+
+  // console.log(app.user);
 };
 
 const signUpSuccess = (data) => {
@@ -31,7 +32,7 @@ const signOutSuccess = () => {
 module.exports = {
   success,
   failure,
-    signUpSuccess,
+  signUpSuccess,
   signInSuccess,
   signOutSuccess,
 };

@@ -1,6 +1,7 @@
 'use strict';
 
 const setAPIOrigin = require('../../lib/set-api-origin');
+// const router = require('../../../lib/set-api-origin');
 const config = require('./config');
 
 const authEvents = require('./auth/events.js');
@@ -18,3 +19,4 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 require('./example');
+// require('../../lib/router.js');

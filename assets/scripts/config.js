@@ -2,8 +2,11 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://aimeelr08.github.io/myFullStackProject/',
-},
+    production: 'https://backfullstack.herokuapp.com',
+  },
 };
+/////VS : ","environment": "development”}} localhost:4741
 
-module.exports = config;
+
+module.exports =
+config;
