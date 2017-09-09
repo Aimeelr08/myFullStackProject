@@ -4,10 +4,9 @@ const app = require('../app.js');
 
 
 const signUp = function (data) {
-  return $.ajaxSetup({
+  return $.ajax({
     url: app.host + '/sign-up',
     method: 'POST',
-      // global: true,
     data: data,
   });
 };
@@ -17,6 +16,7 @@ const signIn = function (data) {
     url: app.host + '/sign-in',
     method: 'POST',
     data: data,
+
   });
 };
 
