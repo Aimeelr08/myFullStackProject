@@ -1,6 +1,9 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@charset "UTF-8";
+ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
+// @import '~materialize/components/color';
+// @import '~materialize/components/carousel';
+// @import 'materialize';
 
 @import 'color';
 @import 'typography';

@@ -39,22 +39,17 @@ const onChangePassword = (event) => {
 
 
 
-// $(() => {
-//
-//   $('#form').on('submit', function (e) {
-//     let data = getFormFields(this);
-//     e.preventDefault();
-//     api.myRequest(data, ui.success, ui.failure);
-//   });
-// });
+
 
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
+
   $('#sign-in').on('submit', onSignIn);
   $('#sign-out').on('submit', onSignOut);
   $('#change-password').on('submit', onChangePassword);
 };
+
 
 module.exports = {
 

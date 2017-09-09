@@ -3,10 +3,7 @@
 const api = require('./api.js');
 const ui = require('./ui.js');
 
-const defaultSetting = () => {
-$('.container-fluid').hide();
-$('div').hide();
-};
+
 const onGetBooks = (event) => {
   event.preventDefault();
   api.getBooks()

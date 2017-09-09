@@ -11,43 +11,27 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
-  <body class="container-fluid">
-    <!-- <div class="block"style= "display:none">
-    <button id="getBooksButton" >Get</button>
-    <button id="clearBooksButton" >Clear</button>
-    <button id="updateBookButton" >New</button>
-    <button id="deleteBookButton" >Delete </button>
-    <div id="content" class="content"> -->
-    <!-- </div> //look for the php/to any file to  require to index html
-INVOKE THE FUNCTION CALL IN THE SCRIPTT!
-//all methods
-//wires all out endpoints/routes
-module.exports = controller({
-  index,
-  show,
-  create,
-  update,
-  destroy
-}, { before: [
-  { method: setUser, only: ['index', 'show'] },
-  { method: authenticate, except: ['index', 'show'] },
-  { method: setModel(Example), only: ['show'] },
-  { method: setModel(Example, { forUser: true }), only: ['update', 'destroy'] }
-] })
-</div> -->
+
 
     <article>
       <header>
+
+
+
       <form id="sign-up">
         <fieldset>
+ <div class="container col s6 teal hoverable">
           <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
+          <input id="email" name="credentials[email]" type="email" placeholder="Email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Email</label>
+
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input type="submit" name="submit" value="Sign up!" method="POST">
-        </fieldset>
-      </form>
+         <input type="submit" name="submit" value="Sign up!" method="POST">
 
+      </form>
+</div>
+<div class="container col s6 pink hoverable">
       <form id="sign-in">
         <fieldset>
           <legend>Sign In!</legend>
@@ -57,7 +41,8 @@ module.exports = controller({
         </fieldset>
       </form>
 
-
+</div>
+<div class="container col s6 blue hoverable">
       <form id="change-password">
         <fieldset>
           <legend>Change Password!</legend>
@@ -66,15 +51,18 @@ module.exports = controller({
           <input type="submit" name="submit" value="Change Password" >
         </fieldset>
       </form>
-    </article>
 
-
+</div>
+<div class="container col s6 purple hoverable">
     <form id="sign-out">
       <fieldset>
         <legend>Sign Out!</legend>
         <input class="sign-out" type="submit" value="Sign Out">
       </fieldset>
     </form>
+</div>
+  </article>
 </header>
+
   </body>
 </html>

@@ -4,6 +4,7 @@ const app = require('../app.js');
 
 const success = (data) => {
   if (data) {
+
     console.log(data);
   } else {
     console.log('Success');
@@ -21,6 +22,7 @@ const signInSuccess = (data) => {
 
 const signUpSuccess = (data) => {
   app.user = data.user;
+
   console.log(app.user);
 };
 const signOutSuccess = () => {
