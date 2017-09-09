@@ -1,11 +1,15 @@
 'use strict';
 
 // user require with a reference to bundle the file and use it in this file
-// var example = require('./example');
-
+ let example = require('./example');
+ let user = require('./example');
 // load manifests
-// scripts
-require('./assets/scripts/index.js');
+let scripts = require('./assets/scripts/index.js');
+let styles = require('./assets/styles/index.scss');
 
-// styles
-require('./assets/styles/index.scss');
+module.exports = {
+  scripts,
+  styles,
+  example,
+  user
+};
