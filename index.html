@@ -12,55 +12,55 @@
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
 
-
+<div class="col s12 teal white-text z-depth-5">FullStackProject:</div>
     <article>
       <header>
 
 
 
-      <form id="sign-up">
-        <fieldset>
- <div class="container col s6 teal hoverable">
+   <form id="sign-up">
+     <fieldset>
+ <div class="container col s6 teal darken-4 hoverable">
           <legend>Sign up!</legend>
           <input id="email" name="credentials[email]" type="email" placeholder="Email" class="validate">
           <label for="email" data-error="wrong" data-success="right">Email</label>
 
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-         <input type="submit" name="submit" value="Sign up!" method="POST">
+       <input type="submit" name="submit" value="Sign up!" method="POST" class="btn-large">
 
       </form>
 </div>
-<div class="container col s6 pink hoverable">
+<div class="container col s6 teal darken-4 hoverable">
       <form id="sign-in">
         <fieldset>
           <legend>Sign In!</legend>
           <input type="text" name="credentials[email]" placeholder="Email">
           <input type="password" name="credentials[password]" placeholder="Password">
-          <input type="submit" name="submit" value="Sign In">
+          <input type="submit" name="submit" value="Sign In" class="btn-large">
         </fieldset>
       </form>
 
 </div>
-<div class="container col s6 blue hoverable">
+<div class="container col s6 teal darken-4 hoverable">
       <form id="change-password">
         <fieldset>
           <legend>Change Password!</legend>
           <input type="password" name="passwords[old]" placeholder="Current Password">
           <input type="password" name="passwords[new]" placeholder="New Password">
-          <input type="submit" name="submit" value="Change Password" >
+          <input type="submit" name="submit" value="Change Password" class="btn-large">
         </fieldset>
       </form>
 
 </div>
-<div class="container col s6 purple hoverable">
+<div class="container  teal darken-4 hoverable">
     <form id="sign-out">
       <fieldset>
         <legend>Sign Out!</legend>
-        <input class="sign-out" type="submit" value="Sign Out">
-      </fieldset>
+        <button type="sign-out" name="submit" value="Sign Out" class="btn-large">
+  Sign-out  </button>  </fieldset>
     </form>
-</div>
+
   </article>
 </header>
 
