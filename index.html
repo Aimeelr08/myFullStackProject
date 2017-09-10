@@ -35,7 +35,8 @@
       <form id="sign-in">
         <fieldset>
           <legend>Sign In!</legend>
-          <input type="text" name="credentials[email]" placeholder="Email">
+          <input id="email" name="credentials[email]" type="email" placeholder="Email" class="validate">
+          <label for="email" data-error="wrong" data-success="right">Email</label>
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="submit" name="submit" value="Sign In" class="btn-large">
         </fieldset>
