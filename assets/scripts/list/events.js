@@ -1,45 +1,42 @@
-// 'use strict';
-//
-// const api = require('./api.js');
-// const ui = require('./ui.js');
-//
-//
-// const onGetBooks = (event) => {
+'use strict';
+
+const api = require('./api.js');
+const ui = require('./ui.js');
+
+const onGetPosts = (event) => {
+  event.preventDefault();
+  api.getPosts()
+    .then(ui.getPostsSuccess)
+    .catch(ui.failure);
+  };
+
+// const onClearPosts = (event) => {
 //   event.preventDefault();
-//   api.getBooks()
-//     .then(ui.getBooksSuccess)
+//   ui.clearPosts();
+//   .then(ui.clearPostsSuccess)
 //     .catch(ui.failure);
 // };
 //
-// const onClearBooks = (event) => {
+const onUpdatePosts = (event) => {
+  event.preventDefault();
+  ui.updatePosts()
+    .then(ui.updatePostsSuccess)
+    .catch(ui.failure);
+  };
+// const onDeletePosts = (event) => {
 //   event.preventDefault();
-//   ui.clearBooks();
-//   .then(ui.clearBooksSuccess)
+//   ui.deletePosts();
+//   .then(ui.deletePostsSuccess)
 //     .catch(ui.failure);
 // };
-//
-// const onUpdateBook = (event) => {
-//   event.preventDefault();
-//   ui.updateBook();
-//   .then(ui.updateBookSuccess)
-//     .catch(ui.failure);
-// };
-// const onDeleteBook = (event) => {
-//   event.preventDefault();
-//   ui.deleteBook();
-//   .then(ui.deleteBookSuccess)
-//     .catch(ui.failure);
-// };
-//
-// const addHandlers = () => {
-//
-//   $('#getBooksButton').hide()
-//   $('#clearBooksButton').hide()
-//   $('#updateBookButton').hide()
-//   $('#deleteBookButton').hide()
-// };
-//
-// module.exports = {
-//   addHandlers,
-//   defaultSetting,
-// };
+
+const addHandlers = () => {
+  $('#getPostsButton').on('submit', onGetPosts);
+  //   $('#clearPostssButton').hide()
+  $('#updatePostsButton').on('submit', onUpdatePosts);
+  //   $('#deletePostsButton')
+  };
+module.exports = {
+  addHandlers,
+  onGetPosts,
+  onUpdatePosts};

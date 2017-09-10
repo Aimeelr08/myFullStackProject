@@ -58,12 +58,23 @@
     <form id="sign-out">
       <fieldset>
         <legend>Sign Out!</legend>
-        <button type="sign-out" name="submit" value="Sign Out" class="btn-large">
+        <button type="sign-out" name="submit" value="Sign Out" class="btn-large" onclick="history.go(0)"/>
   Sign-out  </button>  </fieldset>
     </form>
-
+    <div class="container  teal darken-4 hoverable">
+  <form method="post" action="/posts">
+      <body class="container-fluid">
+          <button id="getPostsButton" class="btn btn-default">get Posts!</button>
+          <button id="updatePostsButton" class="btn btn-default">update Posts!</button>
+          <div id="content" class="content">
+            <select name="post[person_id]">
+          </div>
+        <!-- <input type="hidden" name="name" value="your value"/> -->
+        <!-- <button type="submit">Post</button> -->
+    </form>
   </article>
 </header>
+
 
   </body>
 </html>

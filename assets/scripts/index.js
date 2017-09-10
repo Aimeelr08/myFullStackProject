@@ -5,12 +5,12 @@ const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
 
 const authEvents = require('./auth/events.js');
-// const bookEvents = require('./books/events.js');
+const listsEvents = require('./list/events.js');
 
 // On document ready
 $(() => {
   authEvents.addHandlers();
-  // bookEvents.addHandlers();
+  listsEvents.addHandlers();
 
   setAPIOrigin(location, config);
 });

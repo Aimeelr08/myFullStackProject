@@ -1,23 +1,23 @@
-// 'use strict';
-//
-//
-// const app = require('../app.js');
-//
-// let getLists = function () {
-//   return $.ajax({
-//     url: app.host + '/books', // "http://book-json.herokuapp.com/books"
-//     method: 'GET',
-//   });
-// };
-//
-// let deleteLists = function () {
-//   return $.ajax({
-//     url: app.host + '/books', // "http://book-json.herokuapp.com/books"
-//     method: 'DELETE',
-//   });
-// };
-// module.exports = {
-//   getBooks,
-//   deleteBook,
-//
-// };
+'use strict';
+
+
+const app = require('../app.js');
+
+let getPosts = function () {
+  return $.ajax({
+    url: app.host + '/posts', // "http://posts-json.herokuapp.com/posts"
+    method: 'GET',
+  });
+};
+
+let updatePosts = function () {
+  return $.ajax({
+    url: app.host + '/posts', // "http://posts-json.herokuapp.com/posts"
+    method: 'POST',
+  });
+};
+module.exports = {
+  getPosts,
+  updatePosts,
+
+};
