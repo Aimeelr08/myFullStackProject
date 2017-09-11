@@ -8,8 +8,8 @@ const getPostsSuccess = (data) => {
   $('.content').append(showPostsHtml);
 };
 
-const clearPosts = () => {
-  $('.content').empty();
+const updatePostsSuccess = () => {
+  // $('.content').add('')
 };
 
 const failure = (error) => {
@@ -18,6 +18,6 @@ const failure = (error) => {
 
 module.exports = {
   getPostsSuccess,
-  clearPosts,
+  clearPostsSuccess,
   failure,
 };

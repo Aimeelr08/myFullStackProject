@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Example</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Example</title>
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
 
 <div class="col s12 teal white-text z-depth-5">FullStackProject:</div>
-    <article>
-      <header>
+<article>
+  <header>
+
+    <!-- <input alt="Login" src="/assets/login.png" type="image" /> -->
 
 
-
-   <form id="sign-up">
-     <fieldset>
- <div class="container col s6 teal darken-4 hoverable">
+    <form id="sign-up">
+      <fieldset>
+        <div class="container col s6 teal darken-4 hoverable">
           <legend>Sign up!</legend>
           <input id="email" name="credentials[email]" type="email" placeholder="Email" class="validate">
           <label for="email" data-error="wrong" data-success="right">Email</label>
 
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-       <input type="submit" name="submit" value="Sign up!" method="POST" class="btn-large">
+          <input type="submit" name="submit" value="Sign up!" method="POST" class="btn-large">
 
-      </form>
-</div>
-<div class="container col s6 teal darken-4 hoverable">
+    </form>
+    </div>
+    <div class="container col s6 teal darken-4 hoverable">
       <form id="sign-in">
         <fieldset>
           <legend>Sign In!</legend>
@@ -42,8 +44,8 @@
         </fieldset>
       </form>
 
-</div>
-<div class="container col s6 teal darken-4 hoverable">
+    </div>
+    <div class="container col s6 teal darken-4 hoverable">
       <form id="change-password">
         <fieldset>
           <legend>Change Password!</legend>
@@ -53,28 +55,30 @@
         </fieldset>
       </form>
 
-</div>
-<div class="container  teal darken-4 hoverable">
-    <form id="sign-out">
-      <fieldset>
-        <legend>Sign Out!</legend>
-        <button type="sign-out" name="submit" value="Sign Out" class="btn-large" onclick="history.go(0)"/>
-  Sign-out  </button>  </fieldset>
-    </form>
+    </div>
     <div class="container  teal darken-4 hoverable">
-  <form method="post" action="/posts">
-      <body class="container-fluid">
-          <button id="getPostsButton" class="btn btn-default">get Posts!</button>
-          <button id="updatePostsButton" class="btn btn-default">update Posts!</button>
-          <div id="content" class="content">
-            <select name="post[person_id]">
-          </div>
-        <!-- <input type="hidden" name="name" value="your value"/> -->
-        <!-- <button type="submit">Post</button> -->
-    </form>
-  </article>
-</header>
+      <form id="sign-out">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <form method="get" action="/sign-out">
+          <button type="sign-out" name="submit" value="sign-out" class="btn-large" onclick="history.go(0)" /> Sign-out </button>
+        </fieldset>
+      </form>
+        </article>
+          </header>
+          <div class="container  teal darken-4 hoverable">
+            <div id="content" class="content">
+              <form method="patch" action="/posts">
+                  <button id="updatePostsButton" class="btn btn-default" type='submit' value='Submit' />update Posts!</button>
 
+                <body class="container-fluid">
 
-  </body>
-</html>
+                  <select name="post[person_id]"></select>
+                  <form method='POST' action="/comments" >
+                  <textarea name='comments' id='new'></textarea><br />
+                  <button id="getPostsButton" class="btn btn-default" type='submit' value='Submit' />update Posts!</button>
+
+                </form>
+              </div>
+            </body>
+          </html>
