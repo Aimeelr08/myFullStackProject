@@ -45,7 +45,6 @@ const changePassword = function (data) {
 
 module.exports = {
   app,
-
   signUp,
   signIn,
   signOut,
