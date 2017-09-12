@@ -21,7 +21,6 @@ const signIn = function (data) {
 };
 
 
-
 const signOut = function () {
   return $.ajax({
     url: app.host + '/sign-out/' + app.user.id,
