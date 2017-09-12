@@ -17,13 +17,13 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  console.log(app.user);
+  // console.log(app.user);
 };
 
 const signUpSuccess = (data) => {
   app.user = data.user;
-
-  console.log(app.user);
+    $('#sign-up').removeId(this);
+    // console.log(app.user);
 };
 const signOutSuccess = () => {
   console.log('User signed out successfully');

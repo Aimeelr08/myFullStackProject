@@ -6,7 +6,7 @@ const app = require('../app.js');
 const signUp = function (data) {
   return $.ajax({
     url: app.host + '/sign-up',
-    method: 'POST',
+    method: 'GET',
     data: data,
   });
 };
@@ -44,7 +44,7 @@ const changePassword = function (data) {
 };
 
 module.exports = {
-  app,
+
   signUp,
   signIn,
   signOut,

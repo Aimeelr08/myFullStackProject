@@ -1,7 +1,7 @@
 'use strict';
 
 const app = {
-  host: 'https://backfullstack.herokuapp.com',
+  host: 'https://mybackfullstackproject.herokuapp.com/',
 };
 
 

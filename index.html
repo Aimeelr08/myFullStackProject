@@ -21,7 +21,7 @@
     <!-- <input alt="Login" src="/assets/login.png" type="image" /> -->
 
 
-    <form id="sign-up">
+    <form id="sign-up"  method='GET' action="/sign-up" >
       <fieldset>
         <div class="container col s6 teal darken-4 hoverable">
           <legend>Sign up!</legend>
@@ -30,13 +30,13 @@
 
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input type="submit" name="submit" value="Sign up!" method="POST" class="btn-large">
-
+          <input type="submit" name="submit" value="Sign up!"class="btn-large">
+   </fieldset>
     </form>
     </div>
-    <div class="container col s6 teal darken-4 hoverable">
-      <form id="sign-in">
-        <fieldset>
+        <form id="sign-in">
+          <fieldset>
+          <div class="container col s6 teal darken-4 hoverable">
           <legend>Sign In!</legend>
           <input id="email" name="credentials[email]" type="email" placeholder="Email" class="validate">
           <label for="email" data-error="wrong" data-success="right">Email</label>
@@ -46,9 +46,9 @@
       </form>
 
     </div>
-    <div class="container col s6 teal darken-4 hoverable">
       <form id="change-password">
         <fieldset>
+          <div class="container col s6 teal darken-4 hoverable">
           <legend>Change Password!</legend>
           <input type="password" name="passwords[old]" placeholder="Current Password">
           <input type="password" name="passwords[new]" placeholder="New Password">
@@ -56,18 +56,32 @@
         </fieldset>
       </form>
     </div>
+        <form id="sign-out">
     <div class="container  teal darken-4 hoverable">
-      <form id="sign-out">
-        <fieldset>
+      <fieldset>
           <legend>Sign Out!</legend>
           <form method="get" action="/sign-out">
           <button type="sign-out" name="submit" value="sign-out" class="btn-large" onclick="history.go(0)" /> Sign-out </button>
         </fieldset>
       </form>
+      <div class="container red accent-2 hoverable">
+        <div id="content" class="content">
+
+
+            <body class="container-fluid">
+
+              <select name="post[person_id]"></select>
+              <form method='POST' action="/comments" >
+              <textarea name='comments' id='new'></textarea><br />
+              <button id="getPostsButton" class="btn btn-default" type='submit' value='Submit' />update Posts!</button>
+
+            </form>
+
+          </div>
         </article>
           </header>
  <!-- post -->
 
-       <object width="100%" height="300px" data="posts.html"></object>
+       <!-- <object width="100%" height="300px" data="posts.html"></object> -->
             </body>
           </html>
