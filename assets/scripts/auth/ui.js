@@ -1,13 +1,13 @@
 'use strict';
 
 const app = require('../app.js');
-  $('#posts').hide();
-        $('#change-password').hide();
-          $('#sign-out').hide();
+$('#posts').hide();
+$('#change-password').hide();
+$('#sign-out').hide();
 const success = (data) => {
   if (data) {
- $('#posts').hide();
-   $('#change-password').show();
+    $('#posts').hide();
+    $('#change-password').show();
 
     console.log(data);
   } else {
@@ -35,7 +35,7 @@ const signUpSuccess = (data) => {
   app.user = data.user;
   $('#posts').show();
 
- console.log(app.user);
+  console.log(app.user);
 };
 const signOutSuccess = () => {
   console.log('User signed out successfully');
