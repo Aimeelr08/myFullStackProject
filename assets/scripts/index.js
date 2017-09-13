@@ -10,7 +10,7 @@ const authEvents = require('./auth/events.js');
 // On document ready
 $(() => {
   authEvents.addHandlers();
-  // listsEvents.addHandlers();
+  // listEvents.addHandlers();
 
   setAPIOrigin(location, config);
 });
@@ -23,6 +23,6 @@ require('./example');
 
 // require('../../lib/router.js');
 
- $('#sign-up').on('submit', authEvents.onSignUp);
+ // $('#sign-in').on('submit', listEvents.onGetPosts);
 
 //

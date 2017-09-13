@@ -11,7 +11,7 @@
 
   <!-- Do not add `script` tags unless you know what you are doing -->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -28,52 +28,68 @@
 
     <form id="sign-up">
       <fieldset>
-        <div class="container col s6 teal darken-4 hoverable">
+        <div class="container col s6  hoverable">
           <legend>Sign up!</legend>
           <input id="email" name="credentials[email]" type="email" placeholder="Email" class="validate">
           <label for="email" data-error="wrong" data-success="right">Email</label>
 
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input  type="submit" name="submit" method="POST" value="Sign up!"class="btn-large">
-   </fieldset>
+          <input type="submit" name="submit" value="Sign up!" class="btn-large">
+      </fieldset>
     </form>
     </div>
-        <form id="sign-in">
-          <fieldset>
-          <div class="container col s6 teal darken-4 hoverable">
+  <div class="divider col white"></div>
+    <form id="sign-in">
+      <fieldset>
+        <div class="container col s6  hoverable">
           <legend>Sign In!</legend>
           <input id="email" name="credentials[email]" type="email" placeholder="Email" class="validate">
           <label for="email" data-error="wrong" data-success="right">Email</label>
           <input type="password" name="credentials[password]" placeholder="Password">
           <input type="submit" name="submit" value="Sign In" class="btn-large">
-        </fieldset>
-      </form>
-
+      </fieldset>
+    </form>
+  <div class="divider"></div>
     </div>
-      <form id="change-password">
-        <fieldset>
-          <div class="container col s6 teal darken-4 hoverable">
+    <form id="change-password">
+      <fieldset>
+        <div class="container col s6 teal darken-4 hoverable">
           <legend>Change Password!</legend>
           <input type="password" name="passwords[old]" placeholder="Current Password">
           <input type="password" name="passwords[new]" placeholder="New Password">
           <input type="submit" name="submit" value="Change Password" class="btn-large">
-        </fieldset>
-      </form>
+      </fieldset>
+    </form>
     </div>
-        <form id="sign-out">
-    <div class="container  teal darken-4 hoverable">
-      <fieldset>
+      <div class="divider"></div>
+    <form id="sign-out">
+      <div class="container  teal darken-4 hoverable">
+        <fieldset>
           <legend>Sign Out!</legend>
           <form method="get" action="/sign-out">
-          <button type="sign-out" name="submit" value="sign-out" class="btn-large" onclick="history.go(0)" /> Sign-out </button>
+            <button type="sign-out" name="submit" value="sign-out" class="btn-large" onclick="history.go(0)" /> Sign-out </button>
         </fieldset>
-      </form>
+        </form>
 
-        </article>
-          </header>
- <!-- post -->
+</article>
+</header>
 
-       <object width="100%" height="300px" data="posts.html"></object>
-            </body>
-          </html>
+<!-- <object width="100%" height="300px" data="posts.html"></object> -->
+<form id="posts">
+
+  <div class="row">
+         <div class="input-field col s12">
+    <textarea id="textarea1" class="materialize-textarea" data-length="400"></textarea>
+           <label for="textarea1">Textarea</label>
+    <!-- <button id="getPostsButton" class="btn btn-default" type='submit' value='Submit' />update Posts!</button> --> -->
+    <!-- <input type="submit" name="submit" value="posts" class="btn-large"> -->
+    </form>
+  </div>
+        </div>
+
+
+
+</body>
+
+</html>

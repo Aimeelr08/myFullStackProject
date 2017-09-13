@@ -5,19 +5,19 @@
 //
 // let getPosts = function () {
 //   return $.ajax({
-//     url: app.host + '/comments', // "http://posts-json.herokuapp.com/posts"
-//     method: 'GET',
-//   });
-// };
-//
-// let updatePosts = function () {
-//   return $.ajax({
-//     url: app.host + '/comments', // "http://posts-json.herokuapp.com/posts"
+//     url: app.host + '/posts', // "http://posts-json.herokuapp.com/posts"
 //     method: 'POST',
 //   });
 // };
+//
+// // let updatePosts = function () {
+// //   return $.ajax({
+// //     url: app.host + '/posts', // "http://posts-json.herokuapp.com/posts"
+// //     method: 'PATCH',
+// //   });
+// // };
 // module.exports = {
 //   getPosts,
-//   updatePosts,
+// //  updatePosts,
 //
 // };

@@ -3,13 +3,17 @@ $secondary-background: $light-green;
 $font-color: $purpleish;
 
 body {
-  background-color: $purpleish;
-  border: white;
+  background-color: $grey;
+  border: $blue-grey;
   color: $font-color;
 }
 
-h2 {
-  color: $secondary-background;
+.input-field{
+    background-color: $materialize-pink;
+}
+
+.container {
+  background-color: $materialize-pink;
 }
 
 .nav {
