@@ -2,7 +2,6 @@
 
 const app = require('../app.js');
   $('#posts').hide();
-
         $('#change-password').hide();
           $('#sign-out').hide();
 const success = (data) => {
